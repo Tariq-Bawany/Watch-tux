@@ -1,4 +1,4 @@
-import { viewProduct } from "./collection/collection.js"
+import {  } from "./collection/collection.js"
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
     var nav = document.querySelector('nav');
@@ -73,7 +73,10 @@ function renderProducCard() {
 }
 renderProducCard()
 // viewProduct import from collection.js and not called here 
-viewProduct
+function viewProduct(imgID) {
+    // console.log(imgID);
+    window.location.href = `./product/product.html?id=${imgID}`
+}
 // Image slider functionality
 function initImageSlider() {
     try {
