@@ -42,7 +42,7 @@ var cards = [{
 },
 {
     id: "Rolex",
-    name: "Rolex Day Date II",
+    name: "Rolex DayDate",
     img: "https://scontent.fkhi16-1.fna.fbcdn.net/v/t39.30808-6/469574010_122150653760301123_4148246566049076647_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=QGBbyXTyX_AQ7kNvgHup8ZX&_nc_oc=AdgJJM_0NIdnwJDbTq0C_ilnRdi_mSX0Iq5DgdI3hS3uyZoOK9WfLBeHvVY9_KwOLvs&_nc_zt=23&_nc_ht=scontent.fkhi16-1.fna&_nc_gid=AitlBJPBxXzrPi-cDEAsRQn&oh=00_AYCr-ZHTjXuZPnx7kcrmmVef6dqo1Om8BtC76KhbZbp-7g&oe=6772288B",
     desc: "Coming Soon",
 
