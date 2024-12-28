@@ -1,42 +1,54 @@
-import { productss, } from "../collection/collection.js";
+import { db, doc, getDoc } from "../config/firebase.js";
 import { cards, renderProducCard, } from "../script.js";
 
-// console.log(productss);
 
 
 // featured cards
-//Products cards Render 
 
-// Procuts card render 
 var products = document.getElementById("products")
-
-console.log(cards.length);
-
-// renderProducCard()
-
-// query params || getting id of product from url and then import productss from collection show the related product images and description
-const urlParams = new URLSearchParams(window.location.search);
-const productId = urlParams.get('id');
-var categoryName = productId.slice(0, productId.length - 2)
-var mainImageId = productId.charAt(productId.length - 1)
-
 var productDetailImages = document.getElementById("product-detail-images")
 var productDetailInfo = document.getElementById("product-detail-info")
+var imgDetail;
 
-productDetailImages.innerHTML = `
-    <img id="main-image" src="${productss[categoryName][mainImageId].image}" alt="${productss[categoryName][0].name}">
+
+// renderProducCard()
+async function queryParamAndRenderCard(params) {
+    try {
+
+        // query params || getting id of product from url and then import productss from collection show the related product images and description
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        const indexno = urlParams.get('id').indexOf('|');
+        const productDetails = productId.split('|')
+
+        const docRef = doc(db, productDetails[0], productDetails[1]);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+            imgDetail = docSnap.data()
+            // console.log(imgDetail);
+            // console.log("Document data:", docSnap.data());
+
+        } else {
+            // docSnap.data() will be undefined in this case
+            console.log("No such document!");
+            alert("In maintenance!")
+        }
+        productDetailImages.innerHTML = `
+        <img id="main-image" src="${imgDetail.img}" alt="${imgDetail.name}">
         <div class="image-thumbnails">
-            <img src="${productss[categoryName][mainImageId].image}" alt="${productss[categoryName][0].name}-1" onclick="changeImage(this)">
-            <img src="${productss[categoryName][mainImageId].hover}" alt="${productss[categoryName][0].name}-2" onclick="changeImage(this)">
+            <img src="${imgDetail.img}" alt="${imgDetail.name}-1" onclick="changeImage(this)">
+            <img src="${imgDetail.hover}" alt="${imgDetail.name}-2" onclick="changeImage(this)">
+            
         </div>
 `
-const phoneNumber = '923219315177'; // Your WhatsApp number in international format (without + or spaces)
+        const phoneNumber = '923219315177'; // Your WhatsApp number in international format (without + or spaces)
 
-const message = encodeURIComponent(`Hello, I am interested in your watch => ${productss[categoryName][0].name}`); // Default message
+        const message = encodeURIComponent(`Hello, I am interested in your watch => ${imgDetail.name}`); // Default message
 
-productDetailInfo.innerHTML = `
-<h1>${productss[categoryName][0].name}</h1>
-            <p>Price: <strong>${productss[categoryName][0].price}</strong></p>
+        productDetailInfo.innerHTML = `
+        <h1>${imgDetail.name}</h1>
+            <p>Price: <strong>${imgDetail.price}</strong></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
             <a 
                 href="https://wa.me/${phoneNumber}?text=${message}" 
@@ -45,6 +57,24 @@ productDetailInfo.innerHTML = `
                 Inquire on WhatsApp
             </a>
 `
+
+
+    } catch (error) {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+    }
+
+}
+
+
+// console.log(imgDetail);
+
+queryParamAndRenderCard()
+
+
+
+
+
 
 // Change main image on thumbnail hover click
 function changeImage(thumbnail) {

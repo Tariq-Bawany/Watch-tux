@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     color: #001526;
     background-color: #f5f5f5;
+    font-size: 16px;
 }
 
 /* Navigation */
@@ -33,6 +34,7 @@ nav {
 
 .logo {
     font-size: 1.8rem;
+    white-space: nowrap;
     font-weight: bold;
     color: #fff;
     position: absolute;
@@ -54,8 +56,7 @@ nav {
 }
 
 .nav-links a:hover {
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
+    color: gold;
     cursor: pointer;
 }
 
@@ -314,5 +315,9 @@ footer {
     
     .hero h1 {
         font-size: 2.5rem;
+    }
+    #view-all-collection{
+        position: static;
+        /* float: right; */
     }
 }

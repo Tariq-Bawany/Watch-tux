@@ -5,81 +5,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watch Collection</title>
-    <link rel="stylesheet" href="./collection.css ">
+    <link rel="stylesheet" href="collection.css ">
 </head>
 
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="./collection.html">Collection</a>
+    <div id="loading-spinner">
+        <div class="spinner"></div>
+  <p>Loading products, please wait...</p>
+    </div>
+    <div id="firebase-content">
+        <nav>
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="./collection.html">Collection</a>
+                </div>
+                <div id="logo" class="logo">Watch Tux</div>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="../index.html">Contact</a>
+                </div>
             </div>
-            <div id="logo" class="logo">Watch Tux</div>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="../index.html">Contact</a>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <!-- Rolex Category -->
-        <section class="category">
-            <div class="category-header">
-                <h2>Rolex</h2>
-                <button class="scroll-btn left" onclick="scrollCategory('rolex', -300)">&#8249;</button>
-                <button class="scroll-btn right" onclick="scrollCategory('rolex', 300)">&#8250;</button>
-            </div>
-            <div class="product-collection" id="rolex">
-                <!-- Rolex products will be dynamically added -->
-            </div>
-        </section>
-        
-        <!-- Omeaga Category -->
-        <section class="category">
-            <div class="category-header">
-                <h2>Omega</h2>
-                <button class="scroll-btn left" onclick="scrollCategory('omega', -300)">&#8249;</button>
-                <button class="scroll-btn right" onclick="scrollCategory('omega', 300)">&#8250;</button>
-            </div>
-            <div class="product-collection" id="omega">
-                <!-- Omega products will be dynamically added -->
-            </div>
-        </section>
+        </nav>
+        <main>
+            <!-- Rolex Category -->
+            <section class="category">
+                <div class="category-header">
+                    <h2>Rolex</h2>
+                    <button class="scroll-btn left" onclick="scrollCategory('Rolex', -300)">&#8249;</button>
+                    <button class="scroll-btn right" onclick="scrollCategory('Rolex', 300)">&#8250;</button>
+                </div>
+                <div class="product-collection" id="Rolex">
+                    <!-- Rolex products will be dynamically added -->
+                </div>
+            </section>
 
-        <!-- patek_philipe Category -->
-        <section class="category">
-            <div class="category-header">
-                <h2>Patek Philippe</h2>
-                <button class="scroll-btn left" onclick="scrollCategory('patek_philipe', -300)">&#8249;</button>
-                <button class="scroll-btn right" onclick="scrollCategory('patek_philipe', 300)">&#8250;</button>
+            <!-- Omeaga Category -->
+            <section class="category">
+                <div class="category-header">
+                    <h2>Omega</h2>
+                    <button class="scroll-btn left" onclick="scrollCategory('Omega', -300)">&#8249;</button>
+                    <button class="scroll-btn right" onclick="scrollCategory('Omega', 300)">&#8250;</button>
+                </div>
+                <div class="product-collection" id="Omega">
+                    <!-- Omega products will be dynamically added -->
+                </div>
+            </section>
+
+            <!-- patek_philipe Category -->
+            <section class="category">
+                <div class="category-header">
+                    <h2>Patek Philippe</h2>
+                    <button class="scroll-btn left" onclick="scrollCategory('Patek-Philippe', -300)">&#8249;</button>
+                    <button class="scroll-btn right" onclick="scrollCategory('Patek-Philippe', 300)">&#8250;</button>
+                </div>
+                <div class="product-collection" id="Patek-Philippe">
+                    <!-- patek_philipe products will be dynamically added -->
+                </div>
+            </section>
+
+            <!-- Curren -->
+            <section class="category">
+                <div class="category-header">
+                    <h2>CURREN</h2>
+                    <button class="scroll-btn left" onclick="scrollCategory('CURREN', -300)">&#8249;</button>
+                    <button class="scroll-btn right" onclick="scrollCategory('CURREN', 300)">&#8250;</button>
+                </div>
+                <div class="product-collection" id="CURREN">
+                    <!-- patek_philipe products will be dynamically added -->
+                </div>
+            </section>
+
+            <!-- SKMEI -->
+            <section class="category">
+                <div class="category-header">
+                    <h2>SKMEI</h2>
+                    <button class="scroll-btn left" onclick="scrollCategory('SKMEI', -300)">&#8249;</button>
+                    <button class="scroll-btn right" onclick="scrollCategory('SKMEI', 300)">&#8250;</button>
+                </div>
+                <div class="product-collection" id="SKMEI">
+                    <!-- patek_philipe products will be dynamically added -->
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Watch Tux</h3>
+                    <p>Premium watch retailer</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>WhatsApp: 0318 2229597</p>
+                    <p>Email: Watchtux@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3><a href="../index.html">Home</a></h3>
+                    <h3><a href="./collection.html">Collection</a></h3>
+                    <!-- <h3><a href=""></a></h3> -->
+                </div>
             </div>
-            <div class="product-collection" id="patek_philipe">
-                <!-- patek_philipe products will be dynamically added -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Watch Tux. All rights reserved.</p>
             </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Watch Tux</h3>
-                <p>Premium watch retailer</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p>WhatsApp: 0318 2229597</p>
-                <p>Email: Watchtux@gmail.com</p>
-            </div>
-            <div class="footer-section">
-                <h3><a href="../index.html">Home</a></h3>
-                <h3><a href="./collection.html">Collection</a></h3>
-                <!-- <h3><a href=""></a></h3> -->
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Watch Tux. All rights reserved.</p>
-        </div>
-    </footer>
+        </footer>
+    </div>  
     <script type="module" src="collection.js"></script>
 </body>
 

@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Landing Page</title>
     <link rel="stylesheet" href="product.css">
 </head>
+
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="../collection/collection.html">Collection</a>
+    <div id="loading-spinner">
+        <div class="spinner"></div>
+        <p>Loading products, please wait...</p>
+    </div>
+    <div id="firebase-content">
+        <nav>
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../collection/collection.html">Collection</a>
+                </div>
+                <div id="logo" class="logo">Watch Tux</div>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
-            <div id="logo" class="logo">Watch Tux</div>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
-    <!-- Product Details Section -->
-    <section class="product-details">
-        <div id="product-detail-images">
-            <!-- <img id="main-image" src="https://via.placeholder.com/400" alt="Product Image">
+        </nav>
+        <!-- Product Details Section -->
+        <section class="product-details">
+            <div id="product-detail-images">
+                <!-- <img id="main-image" src="https://via.placeholder.com/400" alt="Product Image">
             <div class="image-thumbnails">
                 <img src="https://via.placeholder.com/400" alt="Thumbnail 1" onclick="changeImage(this)">
                 <img src="https://via.placeholder.com/400/FF0000" alt="Thumbnail 2" onclick="changeImage(this)">
             </div> -->
-        </div>
-        <div id="product-detail-info">
-            <!-- <h1>Luxury Watch</h1>
+            </div>
+            <div id="product-detail-info">
+                <!-- <h1>Luxury Watch</h1>
             <p>Price: <strong>$499</strong></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
             <a 
@@ -39,16 +46,39 @@
                 target="_blank">
                 Buy on WhatsApp
             </a> -->
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <!-- Featured Collection Section -->
-    <section id="collection" class="featured">
-        <button id="view-all-collection">View all</button>
-        <h2>Featured Collection</h2>
-        <div id="products"></div>
-    </section>
+        <!-- Featured Collection Section -->
+        <section id="collection" class="featured">
+            <button id="view-all-collection">View all</button>
+            <h2>Featured Collection</h2>
+            <div id="products"></div>
+        </section>
 
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Watch Tux</h3>
+                    <p>Premium watch retailer</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>WhatsApp: 0318 2229597</p>
+                    <p>Email: Watchtux@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3><a href="../index.html">Home</a></h3>
+                    <h3><a href="./collection.html">Collection</a></h3>
+                    <!-- <h3><a href=""></a></h3> -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Watch Tux. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
     <script type="module" src="product.js"></script>
 </body>
+
 </html>
