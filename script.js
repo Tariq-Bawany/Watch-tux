@@ -76,7 +76,7 @@ renderProducCard()
 
 function viewProduct(imgID) {
     // console.log(imgID);
-    window.location.href = `./product/product.html?id=${imgID}`
+    window.location.href = `/product/product.html?id=${imgID}`
 }
 // Image slider functionality
 function initImageSlider() {
