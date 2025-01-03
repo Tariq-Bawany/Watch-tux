@@ -30,20 +30,20 @@ window.addEventListener('scroll', () => {
 var cards = [{
     id: "Patek-Philippe",
     name: "PP Geneve",
-    img: "https://scontent.fkhi16-1.fna.fbcdn.net/v/t39.30808-6/470140882_122151403340301123_5614018753324020199_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=sEdVu8zyWpIQ7kNvgHRu7sm&_nc_oc=AdhFmnisvwXOXjUdKkX9_uXzwrezEQS_XOLab_5MkbtKn1UjaN8ZrJASj9wmrhogttY&_nc_zt=23&_nc_ht=scontent.fkhi16-1.fna&_nc_gid=A2ckoZ3q3wP8oECftR9qj3L&oh=00_AYCacyViA-T-ldpmDniWhTOULZVF63YX_II2912PotmtJg&oe=67720260",
+    img: "https://github.com/Tariq-Bawany/Watch-tux-assets/blob/main/PatekPhilippe/PP%20Geneve/PP-Geneve-05.jpg?raw=true",
     desc: "Coming Soon",
 },
 {
     id: "Omega",
     name: "Omega Speedmaster Mark ii",
-    img: "https://scontent.fkhi16-2.fna.fbcdn.net/v/t39.30808-6/470212497_122151404264301123_2487606839837565210_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=tM_lflz3vKUQ7kNvgHUj1HP&_nc_oc=AdjkoWl6rLlSDV_YtluYXl4w-j765STj9Iz65JZ9UY87nDOy-l1dTRCEud0eVDMcGeA&_nc_zt=23&_nc_ht=scontent.fkhi16-2.fna&_nc_gid=A_OQxmK3Cp0lcz3hAmk_5Bj&oh=00_AYD_nIAqRHMPEe0g7Zm40TifGjg4urTJavD07FgwbYcMWg&oe=6772056E",
+    img: "https://github.com/Tariq-Bawany/Watch-tux-assets/blob/main/Omega/Omega-Speedmaster-Mark-ii/Omega-Speedmaster-Mark-ii-03.jpg?raw=true",
     desc: "Coming Soon",
 
 },
 {
     id: "Rolex",
-    name: "Rolex DayDate",
-    img: "https://scontent.fkhi16-1.fna.fbcdn.net/v/t39.30808-6/469574010_122150653760301123_4148246566049076647_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=QGBbyXTyX_AQ7kNvgHup8ZX&_nc_oc=AdgJJM_0NIdnwJDbTq0C_ilnRdi_mSX0Iq5DgdI3hS3uyZoOK9WfLBeHvVY9_KwOLvs&_nc_zt=23&_nc_ht=scontent.fkhi16-1.fna&_nc_gid=AitlBJPBxXzrPi-cDEAsRQn&oh=00_AYCr-ZHTjXuZPnx7kcrmmVef6dqo1Om8BtC76KhbZbp-7g&oe=6772288B",
+    name: "Rolex GMT ii Gold",
+    img: "https://github.com/Tariq-Bawany/Watch-tux-assets/blob/main/Rolex/Rolex-GMT-ii-Gold/Rolex-GMT-ii-Gold-01.jpg?raw=true",
     desc: "Coming Soon",
 
 },

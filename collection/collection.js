@@ -61,13 +61,13 @@ function renderProdcutsFromFirebase() {
                 setTimeout(() => {
                     var hover = img.getAttribute('hover-image');
                     img.src = hover;
-                }, 1000);
+                }, 500);
             });
             img.addEventListener('mouseout', () => {
                 setTimeout(() => {
                     var originalImage = img.getAttribute('original-image');
                     img.src = originalImage;
-                }, 1000);
+                }, 500);
             });
         });
     } catch (error) {
