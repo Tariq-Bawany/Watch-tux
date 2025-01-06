@@ -59,7 +59,63 @@ nav {
     color: gold;
     cursor: pointer;
 }
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background: #001526;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 99;
+}
 
+.sidebar.active {
+    left: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-links li {
+    padding: 15px 25px;
+}
+
+.sidebar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar-links a:hover {
+    color: gold;
+}
 /* Header and Slider */
 header {
     height: 100vh;
@@ -160,13 +216,17 @@ header {
 
 #products {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    justify-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .featured-product-card {
+    min-width: 300px;
+    max-width: 400px;
     background: white;
     padding: 1rem;
     border-radius: 10px;
@@ -312,6 +372,17 @@ footer {
     .nav-links {
         display: none;
     }
+    .menu-btn {
+        display: block;
+    }
+
+    .close-btn {
+        display: block;
+    }
+
+    .sidebar {
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
     
     .hero h1 {
         font-size: 2.5rem;
@@ -320,4 +391,10 @@ footer {
         position: static;
         /* float: right; */
     }
+    header{
+        height: 70vh;
+    }
+    .features {
+        grid-template-columns: 1fr;
+      }
 }

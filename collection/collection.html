@@ -14,16 +14,30 @@
   <p>Loading products, please wait...</p>
     </div>
     <div id="firebase-content">
+        <div class="sidebar" id="sidebar">
+            <div class="close-btn" onclick="toggleSidebar()">x</div>
+            <ul class="sidebar-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="./collection.html">Collection</a></li>
+                <li><a href="/About & Contact/about.html">About</a></li>
+                <li><a href="/About & Contact/contact.html">Contact</a></li>
+            </ul>
+        </div>
         <nav>
             <div class="nav-container">
+                <div class="menu-btn" onclick="toggleSidebar()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
                 <div class="nav-links">
-                    <a href="../index.html">Home</a>
+                    <a href="/index.html">Home</a>
                     <a href="./collection.html">Collection</a>
                 </div>
                 <div id="logo" class="logo">Watch Tux</div>
                 <div class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="../index.html">Contact</a>
+                    <a href="/About & Contact/about.html">About</a>
+                    <a href="/About & Contact/contact.html">Contact</a>
                 </div>
             </div>
         </nav>

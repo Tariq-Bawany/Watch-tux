@@ -90,9 +90,22 @@ function viewProduct(imgID) {
     window.location.href = `../product/product.html?id=${imgID}`
 }
 
+// toggle sidebar
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active');
+}
+// Auto close sidebar on larger screens
+window.addEventListener('resize', () => {
+    const sidebar = document.getElementById('sidebar');
+    if (window.innerWidth > 768) {
+        sidebar.classList.remove('active');
+    }
+});
 // makingg it global so HTML can access it
 window.scrollCategory = scrollCategory
 window.viewProduct = viewProduct
+window.toggleSidebar = toggleSidebar
 
 
 export { viewProduct, } 
